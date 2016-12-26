@@ -1,6 +1,6 @@
 {
   "name": "steamer-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "steamer starter kit example",
   "main": "./.steamer/steamer-example.js",
   "scripts": {
@@ -9,11 +9,6 @@
     "test": "",
     "lint": ""
   },
-  "files": [
-    "src",
-    "tools",
-    "README.md"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SteamerTeam/steamer-example.git"

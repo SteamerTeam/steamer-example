@@ -11,6 +11,11 @@ The content of the config should be the options you need to specify in starter k
 
 ```
 module.exports = {
+    "files": [
+        "src",
+        "tools",
+        "README.md"
+    ],
     options: [
     	{
             type: 'input',
@@ -38,16 +43,7 @@ module.exports = {
 
 We use [inquirer](https://github.com/sboudrias/Inquirer.js) to read such options, for more details, please check the documentation.
 
-* Specify files or folders of the starter kit
-Please specifiy files or folders in `package.json`. Usually, we have following files or folders:
-
-```
-"files": [
-	"src",
-	"tools",
-	"README.md"
-],
-```
+`files` field is files or folders needed to be copied to the target folder.
 
 `src` and `tools` are must. `src` is the folder for source code and `tools` is the folder for building tools.
 
