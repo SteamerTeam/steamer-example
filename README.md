@@ -83,11 +83,11 @@ module.exports = {
 };
 ```
 
-    * `files` 
-        - 此配置是任何会被拷贝到开发目录下的文件夹或者文件。
+1. `files` 
+    - 此配置是任何会被拷贝到开发目录下的文件夹或者文件。
 
-    * `options` 
-        - 我们使用 [inquirer](https://github.com/sboudrias/Inquirer.js) 去读取此配置，了解更多，可以去阅读 [inquirer](https://github.com/sboudrias/Inquirer.js)的文档。
+2. `options` 
+    - 我们使用 [inquirer](https://github.com/sboudrias/Inquirer.js) 去读取此配置，了解更多，可以去阅读 [inquirer](https://github.com/sboudrias/Inquirer.js)的文档。
 
 
 * 在 `package.json` 中指定一个主要文件
