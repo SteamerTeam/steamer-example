@@ -1,67 +1,108 @@
-### steamer-example
+# steamer-example
 
-steamer starter kit example
+steamer starterkit 例子
 
-#### How to write a starter kit
+## 目录规范
 
-* Create starter kit config
-You need to create a config file under `.steamer` folder. If your starter kit is called `steamer-example`, the config file name should be `steamer-example.js`.
+```javascript
+.steamer -- steamer 配置
+dist -- 生产环境代码
+|
+src -- 源代码
+|
+config -- 项目配置
+|------project.js -- 项目配置，主要被 webpack，gulp 等使用
+|------steamer.config.js -- 可由steamer生成，包括 webserver, cdn, port, route 等
+|      |
+|      |
+tools  -- 构建工具
+|      |
+|——————dist.js -- 生产环境执行命令
+|——————start.js -- 开发环境执行命令
+|
+package.json
+```
 
-The content of the config should be the options you need to specify in starter kit config. For example:
+## 命令规范
+
+```
+// 开发环境
+npm start
+
+// 生产环境
+npm run dist
+
+// 测试
+npm test
+
+// 规范代码命令
+npm run lint
+```
+
+## 如何开发一个 steamer 规范的 starterkit
+
+* 新建 `.steamer` 目录下的配置
+
+你需要新建一个配置文件于 `.steamer` 目录下。如果你的 starterkit 名称是 `steamer-example`，那么配置的文件名必须是 `steamer-example.js`。
+
+配置的例子如下：
 
 ```
 module.exports = {
-    "files": [
+    files: [
         "src",
         "tools",
-        "README.md"
+        "config",
+        "README.md",
+        ".eslintrc.js",
+        ".stylelintrc.js",
+        ".gitignore",
     ],
     options: [
-    	{
+        {
             type: 'input',
-            name: 'webserver',  // host for html
+            name: 'webserver',
             message: 'html url(//localhost:9000/)'
         },
         {
             type: 'input',
-            name: 'cdn',	// host for cdn, e.g. js, css, png, etc.
+            name: 'cdn',
             message: 'cdn url(//localhost:8000/)'
         },
-    	{
+        {
             type: 'input',
-            name: 'port',	// development port
+            name: 'port',
             message: 'development server port(9000)'
         },
         {
             type: 'input',
-            name: 'route', // development proxy router
+            name: 'route',
             message: 'development server directory(/news/)'
         }
     ]
 };
 ```
 
-We use [inquirer](https://github.com/sboudrias/Inquirer.js) to read such options, for more details, please check the documentation.
+    * `files` 
+        - 此配置是任何会被拷贝到开发目录下的文件夹或者文件。
 
-`files` field is files or folders needed to be copied to the target folder.
+    * `options` 
+        - 我们使用 [inquirer](https://github.com/sboudrias/Inquirer.js) 去读取此配置，了解更多，可以去阅读 [inquirer](https://github.com/sboudrias/Inquirer.js)的文档。
 
-`src` and `tools` are must. `src` is the folder for source code and `tools` is the folder for building tools.
 
-
-* Specify a main file in package.json
-
-You need to speicify the config file as the `main` file in package.json
+* 在 `package.json` 中指定一个主要文件
 
 ```
 "main": "./.steamer/steamer-example.js",
 ```
 
-#### Develop
+## 开发
 ```
-// link you module to global path, then you can use steamer xxx directly
+// 到 starterkit 开发目录下使用此命令，能使 starterkt 建立了一份全局的软链接
+cd steamer-example
 npm link
 
-// when you finish testing, please unlink the module
-npm unlink steamer-xxx
+// 当你测试完后，请取消这个全局的软链接。
+npm unlink steamer-example
 
 ```
