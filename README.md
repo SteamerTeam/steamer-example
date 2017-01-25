@@ -25,7 +25,7 @@ package.json
 
 ## 命令规范
 
-```
+```javascript
 // 开发环境
 npm start
 
@@ -47,7 +47,7 @@ npm run lint
 
 配置的例子如下：
 
-```
+```javascript
 module.exports = {
     files: [
         "src",
@@ -92,12 +92,12 @@ module.exports = {
 
 * 在 `package.json` 中指定一个主要文件
 
-```
+```javascript
 "main": "./.steamer/steamer-example.js",
 ```
 
 ## 开发
-```
+```javascript
 // 到 starterkit 开发目录下使用此命令，能使 starterkt 建立了一份全局的软链接
 cd steamer-example
 npm link
