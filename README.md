@@ -90,7 +90,7 @@ module.exports = {
     - 我们使用 [inquirer](https://github.com/sboudrias/Inquirer.js) 去读取此配置，了解更多，可以去阅读 [inquirer](https://github.com/sboudrias/Inquirer.js)的文档。
 
 
-* 在 `package.json` 中指定一个主要文件
+* 在 `package.json` 中指定一个主要文件，此文件是上面添加的 `.steamer` 目录下的配置，因为 [steamer-plugin-kit](https://github.com/SteamerTeam/steamer-plugin-kit) 的命令运行时候需要读取它。
 
 ```javascript
 "main": "./.steamer/steamer-example.js",
