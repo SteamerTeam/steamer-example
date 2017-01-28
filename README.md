@@ -98,7 +98,7 @@ module.exports = {
 
 ## 开发
 ```javascript
-// 到 starterkit 开发目录下使用此命令，能使 starterkt 建立了一份全局的软链接
+// 到 starterkit 开发目录下使用此命令，能使 starterkit 建立了一份全局的软链接
 cd steamer-example
 npm link
 
