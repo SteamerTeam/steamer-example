@@ -1,13 +1,14 @@
 {
   "name": "steamer-example",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "steamer starter kit example",
   "main": "./.steamer/steamer-example.js",
   "scripts": {
-    "start": "node ./tools/start.js",
-    "dist": "node ./tools/dist.js",
+    "start": "node ./tools/scrpit.js --mode=development",
+    "dist": "node ./tools/script.js --mode=production",
     "test": "",
-    "lint": ""
+    "lint": "",
+    "tpl": "node ./tools/template.js"
   },
   "repository": {
     "type": "git",

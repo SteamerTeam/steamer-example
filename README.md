@@ -10,15 +10,16 @@ dist -- 生产环境代码
 |
 src -- 源代码
 |
-config -- 项目配置
-|------project.js -- 项目配置，主要被 webpack，gulp 等使用
+config -- 项目配置，用户主要关注配置，steamer不更新
+|------project.js -- 项目配置
 |------steamer.config.js -- 可由steamer生成，包括 webserver, cdn, port, route 等
 |      |
 |      |
-tools  -- 构建工具
+tools  -- 构建工具，steamer帮助更新
 |      |
-|——————dist.js -- 生产环境执行命令
-|——————start.js -- 开发环境执行命令
+|——————script.js -- 生产环境或开发环境执行命令
+|——————template.js -- 模板生成命令
+|——————webpack.base.js -- webpack 基础配置
 |
 package.json
 ```
@@ -37,6 +38,9 @@ npm test
 
 // 规范代码命令
 npm run lint
+
+// 模板生成
+npm run tpl --tpl xxx[模板] -path xxx[路径]
 ```
 
 ## 如何开发一个 steamer 规范的 starterkit
