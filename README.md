@@ -109,6 +109,14 @@ module.exports = {
 ]
 ```
 
+
+## `Util` 库
+
+开发脚手架时，常常需要一些 `Util` 函数，帮助你快速开发，`Steamer` 提供以下 `Util` 库：
+
+* [steamer-webpack-utils](https://github.com/SteamerTeam/steamer-webpack-utils)
+
+
 ## 开发
 ```javascript
 // 到 starterkit 开发目录下使用此命令，能使 starterkit 建立了一份全局的软链接
