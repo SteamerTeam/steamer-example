@@ -5,7 +5,7 @@ dist
 build
 dev
 .DS_Store
-webpack_cache
+.cache
 .webpack_cache
 .happypack
 npm-debug.log
