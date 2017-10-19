@@ -12,13 +12,12 @@ src -- 源代码
 |
 config -- 项目配置，用户主要关注配置，steamer不更新
 |------project.js -- 项目配置
-|------steamer.config.js -- 可由steamer生成，包括 webserver, cdn, port, route 等
+|------steamer.config.js -- 可由steamer生成，包括 webserver, cdn, port 等
 |      |
 |      |
 tools  -- 构建工具，steamer帮助更新
 |      |
 |——————script.js -- 生产环境或开发环境执行命令
-|——————template.js -- 模板生成命令
 |——————webpack.base.js -- webpack 基础配置
 |
 package.json
@@ -40,7 +39,7 @@ npm test
 npm run lint
 
 // 模板生成
-npm run tpl --tpl xxx[模板] -path xxx[路径]
+steamer kit -t
 ```
 
 ## 如何开发一个 steamer 规范的 starterkit
@@ -59,29 +58,31 @@ module.exports = {
         "config",
         "README.md",
         ".eslintrc.js",
+        ".eslintignore",
         ".stylelintrc.js",
+        ".stylelintignore",
+        "postcss.config.js",
         ".gitignore",
+        ".babelrc"
     ],
     options: [
         {
             type: 'input',
             name: 'webserver',
-            message: 'html url(//localhost:9000/)'
+            message: 'html url(//localhost:9000/)',
+            default: "//localhost:9000/",
         },
         {
             type: 'input',
             name: 'cdn',
-            message: 'cdn url(//localhost:8000/)'
+            message: 'common cdn url(//localhost:8000/)',
+            default: "//localhost:8000/",
         },
         {
             type: 'input',
             name: 'port',
-            message: 'development server port(9000)'
-        },
-        {
-            type: 'input',
-            name: 'route',
-            message: 'development server directory(/news/)'
+            message: 'development server port(9000)',
+            default: '9000',
         }
     ]
 };
