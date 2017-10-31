@@ -6,17 +6,17 @@ steamer starterkit 例子
 ```javascript
 npm i -g steamerjs
 
-steamer develop --kit [starterkit name]
+steamer develop --kit [starterkit name xxx]
 // 或
-steamer develop -k [starterkit name]
+steamer develop -k [starterkit name xxx]
 // 命令运行后，会下载 [steamer-example](https://github.com/steamerjs/steamer-example)
 
 // 到 starterkit 开发目录下使用此命令，能使 starterkit 建立了一份全局的软链接
-cd steamer-example
+cd steamer-xxx
 npm link
 
 // 当你测试完后，请取消这个全局的软链接。
-npm unlink steamer-example
+npm unlink steamer-xxx
 
 ```
 
