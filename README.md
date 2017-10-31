@@ -2,6 +2,24 @@
 
 steamer starterkit 例子
 
+## 开发
+```javascript
+npm i -g steamerjs
+
+steamer develop --kit [starterkit name]
+// 或
+steamer develop -k [starterkit name]
+// 命令运行后，会下载 [steamer-example](https://github.com/steamerjs/steamer-example)
+
+// 到 starterkit 开发目录下使用此命令，能使 starterkit 建立了一份全局的软链接
+cd steamer-example
+npm link
+
+// 当你测试完后，请取消这个全局的软链接。
+npm unlink steamer-example
+
+```
+
 ## 目录规范
 
 ```javascript
@@ -116,15 +134,3 @@ module.exports = {
 开发脚手架时，常常需要一些 `Util` 函数，帮助你快速开发，`Steamer` 提供以下 `Util` 库：
 
 * [steamer-webpack-utils](https://github.com/SteamerTeam/steamer-webpack-utils)
-
-
-## 开发
-```javascript
-// 到 starterkit 开发目录下使用此命令，能使 starterkit 建立了一份全局的软链接
-cd steamer-example
-npm link
-
-// 当你测试完后，请取消这个全局的软链接。
-npm unlink steamer-example
-
-```
